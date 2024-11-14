@@ -1,0 +1,9 @@
+01 09 2024 
+Trying to create the dashboard showing group types and number of orders per region. 
+Starting with downloading historical data to Docker using an example from the website containing the data. 
+Currently the full 2024 data will be downloaded to Docker volume eve-hist-data 
+This should then be loaded into python and aggregated. 
+Plots will be created and added to a dash plotly interface. 
+
+(Maybe a javascript website would help with react in the future)
+
