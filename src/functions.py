@@ -1,7 +1,7 @@
 import requests
 
+#%% Station name from ID
 
-# get station name from ID
 def get_station_name(station_id):
     base_url = "https://esi.evetech.net/latest/"
     station_id = 60015181
@@ -18,22 +18,7 @@ def get_station_name(station_id):
     return stations['name']
 
 
-# {'34': {'buy': {'weightedAverage': '3.0881533201273763',
-#    'max': '5.0',
-#    'min': '0.01',
-#    'stddev': '1.377445895533451',
-#    'median': '4.0',
-#    'volume': '3472929648.0',
-#    'orderCount': '41',
-#    'percentile': '4.549248341744699'},
-#   'sell': {'weightedAverage': '6.220267217020354',
-#    'max': '50000.0',
-#    'min': '4.11',
-#    'stddev': '6399.608737911598',
-#    'median': '6.045',
-#    'volume': '18374732618.0',
-#    'orderCount': '124',
-#    'percentile': '4.804705309893614'}},
+#%% Buy and sell orders per item
 
 # Use some type IDs to get their 
 #   buy and sell data (only one buy and one sell table per item?)
@@ -55,3 +40,5 @@ def get_buy_sell(params):
         return None
     
 
+
+#%% Next function
