@@ -11,25 +11,16 @@ from sqlalchemy import create_engine
 import polars as pl
 import pandas as pd
 
-# Create a database connection (example for PostgreSQL)
-# Replace the connection string with your actual database connection details
+# Create a database connection (example for mySQL)
 engine = create_engine('mysql://rkostova:ra77fg28@localhost:3306/eve_db')
 # SQL query
-query1 = 'SELECT * FROM type_category'
+query1 = "SELECT * FROM type_category WHERE categoryName = 'Ship'"
 # Load query result into a Pandas DataFrame
 types_df_pandas = pd.read_sql(query1, engine)
 # Convert the Pandas DataFrame to a Polars DataFrame
 types_df = pl.from_pandas(types_df_pandas)
 types_df.group_by('groupID').len()
 
-
-
-connection = mysql.connector.connect(
-    host="localhost",      # e.g., 'localhost'
-    user="rkostova ",        # e.g., 'root'
-    password="ra77fg28",    # Your MySQL password
-    database="eve_db"     # The database you want to connect to
-)
 
 query1 = 'select * from invTypes'
 types_df = pl.read_da(connection.execute(query1).fetchall())
