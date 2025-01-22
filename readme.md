@@ -7,7 +7,7 @@ Project tools
 
 TO DO
 
-Create a dashboard (not in dash, but maybe in javascript or django) showing prices of main ships across regions.
+Create a dashboard showing prices of main ships across regions.
 Do machine larning after EDA to improve decision-making when buying ships in differnt regions, 
 maybe using historical prices (best time, timefrequency), region safety, ship strength. 
 
